@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+const baseUrl = "https://hristo.nikodimov.nenkov.github.io";
 
 new Vue({
   router,
@@ -12,8 +13,7 @@ new Vue({
   render: h => h(App),
   created () {
     if (sessionStorage.redirect) {
-      const redirect = sessionStorage.redirect
-      console.log(redirect);
+      const redirect = sessionStorage.redirect.split(baseUrl)[1];
       delete sessionStorage.redirect
       this.$router.push(redirect)
     }
