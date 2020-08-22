@@ -311,3 +311,7 @@ fabric.properties
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/vue,vuejs,node,webstorm,visualstudiocode,eclipse
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/GitHub Pages Vue App.iml
+/.idea/modules.xml
+/.idea/vcs.xml
