@@ -5,7 +5,7 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
-const baseUrl = "https://hristo.nikodimov.nenkov.github.io";
+const baseUrl = "https://hristo.nikodimov.nenkov.github.io/";
 
 new Vue({
   router,
