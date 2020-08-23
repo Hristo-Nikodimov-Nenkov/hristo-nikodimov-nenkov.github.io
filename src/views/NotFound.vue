@@ -20,7 +20,8 @@ export default {
         this.$router.push('/')
             .then(() => {
               console.log('Auto redirect to Home page.');
-            });
+            })
+            .catch((err) => console.log(err));
       }else{
         setTimeout(() => {
           this.secondsLeft--
