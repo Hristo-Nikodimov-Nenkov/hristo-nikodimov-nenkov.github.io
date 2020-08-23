@@ -14,9 +14,4 @@ export default {
 </script>
 
 <style scoped>
-#home-page{
-  margin: 10px;
-  border: 1px solid #999999;
-  border-radius: 8px;
-}
 </style>
