@@ -1,9 +1,7 @@
 <template>
   <nav>
-    <div class="nav-section" v-for="(section, sectionIndex) in sections" :key="sectionIndex">
-      <div class="nav-item" v-for="(item, index) in section.items" :key="index">
-        <router-link :to="item.url">{{ item.text }}</router-link>
-      </div>
+    <div class="nav-item" v-for="(item, index) in this.getNavItems" :key="index">
+      <router-link :to="item.url">{{ item.text }}</router-link>
     </div>
   </nav>
 </template>
@@ -31,6 +29,14 @@ export default {
             {
               text: "Certificates",
               url: "/certificates"
+            },
+            {
+              text: "Interests",
+              url: "/interests"
+            },
+            {
+              text: "Hobbies",
+              url: "/hobbies"
             }
           ]
         },
@@ -39,10 +45,23 @@ export default {
             {
               text: "About",
               url: "/about"
+            },
+            {
+              text: "Contacts",
+              url: "/contacts"
+            },
+            {
+              text: "Repos",
+              url: "/repos"
             }
           ]
         }
       ]
+    }
+  },
+  computed: {
+    getNavItems: function () {
+      return this.sections.reduce((acc, sec) => acc.concat(sec.items), []);
     }
   }
 }
@@ -57,18 +76,19 @@ nav {
   padding: 5px 15px;
 }
 
-.nav-section {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.nav-item{
+.nav-item {
   margin: 5px auto;
 }
 
-.nav-item a{
+.nav-item a {
   text-align: center;
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
+
+.nav-item a.router-link-exact-active {
+  color: lime;
+}
+
 </style>

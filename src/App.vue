@@ -48,8 +48,8 @@ body {
   text-align: center;
   color: #2c3e50;
 
-  margin: 2vw;
-  height: calc(100% - 4vw);
+  margin: 1vw;
+  height: calc(100% - 2vw);
 
   border: 1px solid #333333;
   border-radius: 8px;
