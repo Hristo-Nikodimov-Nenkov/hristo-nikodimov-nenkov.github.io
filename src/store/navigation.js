@@ -1,6 +1,8 @@
 export default {
     namespaced: true,
-    state: {},
+    state: {
+        mergeSectionsItems: true
+    },
     getters: {},
     mutations: {},
     actions: {}
