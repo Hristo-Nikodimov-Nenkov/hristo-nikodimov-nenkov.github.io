@@ -19,8 +19,6 @@ export default {
         ]
     },
     getters: {
-        getMergeSectionsItems: (state) => state.mergeSectionsItems,
-        getSections: (state) => state.sections,
         getSection: (state) => (sectionName) => state.sections.find(s => s.name === sectionName)
     },
     mutations: {
