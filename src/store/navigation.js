@@ -7,6 +7,8 @@ export default {
     getters: {
         getMergeSectionsItems: (state) => state.mergeSectionsItems
     },
-    mutations: {},
+    mutations: {
+        setMergeSectionsItems: (state, value) => state.mergeSectionsItems = value
+    },
     actions: {}
 }
