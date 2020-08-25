@@ -2,9 +2,11 @@ export default {
     namespaced: true,
     state: {
         mergeSectionsItems: true,
-        sections:[]
+        sections: []
     },
-    getters: {},
+    getters: {
+        getMergeSectionsItems: (state) => state.mergeSectionsItems
+    },
     mutations: {},
     actions: {}
 }
