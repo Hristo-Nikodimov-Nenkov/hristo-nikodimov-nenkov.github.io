@@ -1,7 +1,16 @@
 <template>
   <nav>
-    <div class="nav-item" v-for="(item, index) in this.getNavItems" :key="index">
-      <router-link :to="item.url">{{ item.text }}</router-link>
+    <div v-if="mergeSectionsItems">
+      <div v-for="(section, sectionIndex) in this.sections" :key="sectionIndex">
+        <div v-for="(item, itemIndex) in section.items" :key="itemIndex">
+          <router-link :to="item.url">{{ item.text }}</router-link>
+        </div>
+      </div>
+    </div>
+    <div v-else>
+      <div class="nav-item" v-for="(item, index) in this.getNavItems" :key="index">
+        <router-link :to="item.url">{{ item.text }}</router-link>
+      </div>
     </div>
   </nav>
 </template>
