@@ -1,6 +1,6 @@
 <template>
 <div>
-  Application footer content.
+  Vue v2 application hosted on GitHub Pages.
 </div>
 </template>
 <script>
