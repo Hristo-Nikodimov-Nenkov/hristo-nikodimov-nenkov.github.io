@@ -1,17 +1,17 @@
 <template>
   <nav>
-    <div v-if="mergeSectionsItems">
-      <div v-for="(section, sectionIndex) in this.sections" :key="sectionIndex">
-        <div v-for="(item, itemIndex) in section.items" :key="itemIndex">
-          <router-link :to="item.url">{{ item.text }}</router-link>
-        </div>
-      </div>
-    </div>
-    <div v-else>
+    <template v-if="(this.mergeSectionsItems)">
       <div class="nav-item" v-for="(item, index) in this.getNavItems" :key="index">
         <router-link :to="item.url">{{ item.text }}</router-link>
       </div>
-    </div>
+    </template>
+    <template class="nav-section" v-else>
+      <div class="nav-section" v-for="(section, sectionIndex) in this.sections" :key="sectionIndex">
+        <div class="nav-item" v-for="(item, itemIndex) in section.items" :key="itemIndex">
+          <router-link :to="item.url">{{ item.text }}</router-link>
+        </div>
+      </div>
+    </template>
   </nav>
 </template>
 
@@ -21,16 +21,11 @@ const { mapState, mapGetters} = createNamespacedHelpers('navigation');
 
 export default {
   name: "NavBar",
-  data: function () {
-    return {
-      sections: []
-    }
-  },
   computed: {
     getNavItems: function () {
       return this.sections.reduce((acc, sec) => acc.concat(sec.items), []);
     },
-    ...mapState(['mergeSectionsItems', 'sections']),
+    ...mapState(['mergeSectionsItems','sections']),
     ...mapGetters(['getSection'])
   }
 }
@@ -43,6 +38,11 @@ nav {
   justify-content: space-between;
   width: auto;
   padding: 5px 15px;
+}
+.nav-section{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-item {

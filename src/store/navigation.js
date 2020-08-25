@@ -15,6 +15,18 @@ export default {
                         url: '/about'
                     }
                 ]
+            },
+            {
+                name: 'Education',
+                items: [
+                    {
+                        text: 'Courses',
+                        url: '/courses'
+                    }, {
+                        text: 'Certificates',
+                        url: '/certificates'
+                    }
+                ]
             }
         ]
     },
