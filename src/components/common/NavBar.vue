@@ -11,52 +11,7 @@ export default {
   name: "NavBar",
   data: function () {
     return {
-      sections: [
-        {
-          items: [
-            {
-              text: "Home",
-              url: "/"
-            }
-          ]
-        },
-        {
-          items: [
-            {
-              text: "Education",
-              url: "/education"
-            },
-            {
-              text: "Certificates",
-              url: "/certificates"
-            },
-            {
-              text: "Interests",
-              url: "/interests"
-            },
-            {
-              text: "Hobbies",
-              url: "/hobbies"
-            }
-          ]
-        },
-        {
-          items: [
-            {
-              text: "About",
-              url: "/about"
-            },
-            {
-              text: "Contacts",
-              url: "/contacts"
-            },
-            {
-              text: "Repos",
-              url: "/repos"
-            }
-          ]
-        }
-      ]
+      sections: []
     }
   },
   computed: {
