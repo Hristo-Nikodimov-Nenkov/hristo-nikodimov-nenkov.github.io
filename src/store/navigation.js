@@ -1,7 +1,8 @@
 export default {
     namespaced: true,
     state: {
-        mergeSectionsItems: true
+        mergeSectionsItems: true,
+        sections:[]
     },
     getters: {},
     mutations: {},
