@@ -19,7 +19,7 @@ export default {
         ]
     },
     getters: {
-        getSection: (state) => (sectionName) => state.sections.find(s => s.name === sectionName)
+        getSection: (state) => (sectionName) => state.sections.find(s => s.name.toLowerCase() === sectionName.toLowerCase())
     },
     mutations: {
         setMergeSectionsItems: (state, value) => state.mergeSectionsItems = value,
