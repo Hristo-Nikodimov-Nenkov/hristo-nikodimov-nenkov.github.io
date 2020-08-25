@@ -7,6 +7,9 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
+const { mapState, mapGetters} = createNamespacedHelpers('navigation');
+
 export default {
   name: "NavBar",
   data: function () {
@@ -17,7 +20,9 @@ export default {
   computed: {
     getNavItems: function () {
       return this.sections.reduce((acc, sec) => acc.concat(sec.items), []);
-    }
+    },
+    ...mapState(['mergeSectionsItems', 'sections']),
+    ...mapGetters(['getSection'])
   }
 }
 </script>
