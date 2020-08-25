@@ -17,8 +17,7 @@ export default {
   computed: {
     getNavItems: function () {
       return this.sections.reduce((acc, sec) => acc.concat(sec.items), []);
-    },
-    methods: {}
+    }
   }
 }
 </script>
