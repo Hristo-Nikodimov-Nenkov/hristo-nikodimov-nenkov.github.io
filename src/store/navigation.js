@@ -8,7 +8,8 @@ export default {
         getMergeSectionsItems: (state) => state.mergeSectionsItems
     },
     mutations: {
-        setMergeSectionsItems: (state, value) => state.mergeSectionsItems = value
+        setMergeSectionsItems: (state, value) => state.mergeSectionsItems = value,
+        toggleMergeSectionsItems: (state) => state.mergeSectionsItems = !state.mergeSectionsItems
     },
     actions: {}
 }
