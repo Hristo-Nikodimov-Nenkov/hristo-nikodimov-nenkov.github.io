@@ -1,28 +1,29 @@
 <template>
-<div>
- <h1>Page not found.</h1>
-  <h5>Auto redirect to home page in {{this.secondsLeft}} seconds.</h5>
-</div>
+  <div>
+    <h1>Page not found.</h1>
+    <h5>Auto redirect to home page in {{ this.secondsLeft }} seconds.</h5>
+  </div>
 </template>
+
 <script>
 const countDownStartValue = 5;
 
 export default {
-  name:"NotFound",
-  data:function (){
+  name: "NotFound",
+  data: function () {
     return {
-      secondsLeft:countDownStartValue
+      secondsLeft: countDownStartValue
     }
   },
-  methods:{
+  methods: {
     countDownTimer() {
-      if(this.secondsLeft === 0) {
+      if (this.secondsLeft < 1) {
         this.$router.push('/')
             .then(() => {
               console.log('Auto redirect to Home page.');
             })
             .catch((err) => console.log(err));
-      }else{
+      } else {
         setTimeout(() => {
           this.secondsLeft--
           this.countDownTimer()
@@ -35,8 +36,9 @@ export default {
   }
 }
 </script>
+
 <style scoped>
-  h1, h5{
-    text-align: center;
-  }
+h1, h5 {
+  text-align: center;
+}
 </style>

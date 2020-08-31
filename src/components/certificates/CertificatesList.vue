@@ -1,6 +1,8 @@
 <template>
-  <div>
-
+  <div class="certificates-list">
+    <div v-for="(certificate, certificateIndex) in this.certificates" :key="certificateIndex">
+      <certificates-list-item :certificate="certificate"/>
+    </div>
   </div>
 </template>
 
@@ -8,14 +10,22 @@
 import {createNamespacedHelpers} from "vuex"
 const {mapState, mapGetters, mapActions} = createNamespacedHelpers("certificates")
 
+import CertificatesListItem from "./CertificatesListItem.vue"
+
 export default {
   name: "CertificatesList",
+  components:{
+    CertificatesListItem
+  },
   computed:{
-    ...mapState([]),
+    ...mapState(["certificates"]),
     ...mapGetters([])
   },
   methods:{
-    ...mapActions([])
+    ...mapActions(["loadCertificates"])
+  },
+  created() {
+    this.loadCertificates();
   }
 }
 </script>
