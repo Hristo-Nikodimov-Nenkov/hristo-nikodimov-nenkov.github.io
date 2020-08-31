@@ -1,6 +1,6 @@
 export default {
     loadCertificates: function (context) {
-        if (!context.state.certificates) {
+        if (context.state.certificates.length === 0) {
             const certificates = [
                 {
                     courseName:"SoftUni - VueJS",
@@ -16,7 +16,7 @@ export default {
                 }
             ]
 
-           context.commit("setCertificates", certificates);
+            context.commit("setCertificates", certificates);
         }
     }
 }

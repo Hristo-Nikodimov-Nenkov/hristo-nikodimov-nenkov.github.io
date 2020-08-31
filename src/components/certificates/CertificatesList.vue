@@ -24,8 +24,8 @@ export default {
   methods:{
     ...mapActions(["loadCertificates"])
   },
-  created() {
-    this.loadCertificates();
+  mounted() {
+    this.loadCertificates()
   }
 }
 </script>
