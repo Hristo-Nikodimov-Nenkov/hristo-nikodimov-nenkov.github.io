@@ -1,32 +1,28 @@
 <template>
-<div class="certificates-list-item">
-  <div>
-    {{this.certificate.courseName}}
+  <div class="certificates-list-item">
+    <img :src="this.imageUrl" :alt="this.certificate.courseName">
   </div>
-  <div>
-    {{this.certificate.certificateThumb}}
-  </div>
-  <div>
-    {{this.certificate.courseGrade}}
-  </div>
-  <div>
-    {{this.certificate.verificationUrl}}
-  </div>
-</div>
 </template>
 
 <script>
 export default {
-name: "CertificatesListItem",
-  props:{
+  name: "CertificatesListItem",
+  props: {
     certificate: {
-      type:Object,
-      required:true
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    imageUrl: function () {
+      return `https://softuni.bg/certificates/certificates/converttoimage/${this.certificate.id}?code=${this.certificate.code}`
     }
   }
 }
 </script>
 
 <style scoped>
-
+img{
+  width: 100%;
+}
 </style>
