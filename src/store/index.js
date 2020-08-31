@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import navigation from "@/store/navigation";
+import navigation from "./navigation";
+import certificates from "./certificates";
 
 Vue.use(Vuex)
 
@@ -13,6 +14,7 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    navigation
+    navigation,
+    certificates
   }
 })

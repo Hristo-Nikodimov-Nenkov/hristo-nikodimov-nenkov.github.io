@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <img :src="this.certificateThumb" alt="Certificate preview image.">
-    <div class="">{{ this.courseName }}</div>
-    <div class="">{{ this.grade }}</div>
-    <qrcode-vue :value="this.url"/>
+    <img :src="this.certificate.certificateThumb" alt="Certificate preview image.">
+    <div class="">{{ this.certificate.courseName }}</div>
+    <div class="">{{ this.certificate.courseGrade }}</div>
+    <qrcode-vue :value="this.certificate.verificationUrl"/>
   </div>
 </template>
 
@@ -16,15 +16,23 @@ export default {
     QrcodeVue
   },
   data: function () {
-    return {
-      url: ""
-    }
+    return {}
   },
   props: {
-    courseName: String,
-    certificateThumb: String,
-    grade: Number,
-    verificationUrl: String
+    certificate: {
+      type: Object,
+      required: true,
+      validator: function (value) {
+        const courseNameCheck = !!value.courseName;
+        const certificateThumbCheck = !!value.certificateThumb;
+        const courseGradeCheck= !!value.courseGrade
+            && +value.courseGrade >= 5.0
+            && +value.courseGrade <= 6.0;
+        const verificationUrlCheck = !! value.verificationUrl;
+
+        return courseNameCheck && certificateThumbCheck && courseGradeCheck && verificationUrlCheck
+      }
+    }
   }
 }
 </script>

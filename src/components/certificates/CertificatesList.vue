@@ -5,8 +5,18 @@
 </template>
 
 <script>
+import {createNamespacedHelpers} from "vuex"
+const {mapState, mapGetters, mapActions} = createNamespacedHelpers("certificates")
+
 export default {
-  name: "CertificatesList"
+  name: "CertificatesList",
+  computed:{
+    ...mapState([]),
+    ...mapGetters([])
+  },
+  methods:{
+    ...mapActions([])
+  }
 }
 </script>
 

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-name: "SertificatesListItem"
+name: "CertificatesListItem"
 }
 </script>
 
