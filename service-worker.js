@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.bcf531c239b31bbb948088d654246d5f.js"
+  "/precache-manifest.063a837d59de066cc2a5f138ec773d6f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "gh-pages-app"});
