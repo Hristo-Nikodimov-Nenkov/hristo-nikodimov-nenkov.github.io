@@ -6,7 +6,7 @@
 </template>
 
 <script>
-const countDownStartValue = 5;
+const countDownStartValue = 3;
 
 export default {
   name: "NotFound",

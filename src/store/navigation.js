@@ -9,10 +9,6 @@ export default {
                     {
                         text: 'Home',
                         url: '/'
-                    },
-                    {
-                        text: 'About',
-                        url: '/about'
                     }
                 ]
             },
@@ -20,11 +16,17 @@ export default {
                 name: 'Education',
                 items: [
                     {
-                        text: 'Courses',
-                        url: '/courses'
-                    }, {
                         text: 'Certificates',
                         url: '/certificates'
+                    }
+                ]
+            },
+            {
+                name:'Projects',
+                items:[
+                    {
+                        text:'Projects',
+                        url:'/projects'
                     }
                 ]
             }

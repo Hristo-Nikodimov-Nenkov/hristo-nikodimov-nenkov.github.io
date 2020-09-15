@@ -27,18 +27,12 @@ export default {
 
 <style>
 html {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  padding: 2vh;
 }
 
 body {
-  max-height: 100%;
-  max-width: 100%;
   margin: 0;
-  padding: 10px;
-  height: calc(100% - 20px);
+  padding: 0;
 }
 
 #app {
@@ -46,36 +40,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-
-  margin: 1vw;
-  height: calc(100% - 2vw);
-
+  display: grid;
+  grid-template-areas: "header" "content" "footer";
+  grid-auto-rows: max-content auto max-content;
   border: 1px solid #333333;
   border-radius: 8px;
-
-  display: flex;
-  flex-direction: column;
+  height: 95vh;
 }
 
 header {
-  height: max-content;
-  flex: 0;
+  width: 100%;
+  grid-area: header;
 }
 
-main{
-  flex: auto;
-  height: 100%;
+main {
+  grid-area: content;
   border-top: 1px solid #333333;
   border-bottom: 1px solid #333333;
-}
-.app-page{
-  height: 100%;
+  overflow: auto;
 }
 
 footer {
-  height: max-content;
-  margin: 1vh;
-  flex: 0;
+  grid-area: footer;
+  width: 100%;
+  z-index: 10;
 }
+
+footer > div {
+  padding: 1vh;
+  text-align: center;
+}
+
 </style>
