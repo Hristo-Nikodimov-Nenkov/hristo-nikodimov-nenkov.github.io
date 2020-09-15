@@ -1,6 +1,6 @@
 <template>
   <div class="certificates-list-item">
-    <img :src="this.imageUrl" :alt="this.certificate.courseName">
+    <img :src="this.imageUrl" :alt="this.certificate.courseName" @click="openInNewTab">
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     certificate: {
       type: Object,
       required: true
+    }
+  },
+  methods:{
+    openInNewTab: function (){
+      window.open(this.imageUrl, '_blank');
     }
   },
   computed: {
@@ -25,4 +30,13 @@ export default {
 img{
   width: 100%;
 }
+
+.certificates-list-item {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+
 </style>
