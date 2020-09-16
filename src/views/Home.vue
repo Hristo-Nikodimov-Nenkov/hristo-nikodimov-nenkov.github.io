@@ -1,20 +1,20 @@
 <template>
   <div id="home-page">
-    <h1>Portfolio</h1>
-    <h1>Hristo Nikodimov Nenkov</h1>
+    <personal-info/>
   </div>
 </template>
 
 <script>
+import PersonalInfo from "@/components/sections/PersonalInfo";
 
 export default {
   name: 'Home',
-  data:function (){
-    return {
-    }
-  },
   components: {
-  }
+    PersonalInfo
+  },
+  data: function () {
+    return {}
+  },
 }
 </script>
 
