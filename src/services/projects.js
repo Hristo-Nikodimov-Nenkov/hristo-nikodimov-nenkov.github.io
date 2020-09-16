@@ -4,6 +4,12 @@ const projects = [
         description:"",
         language:"C#",
         techStack:"ASP.NET Core, Blazor"
+    },
+    {
+        name: "Portfolio",
+        description: "",
+        language: "JavaScript",
+        techStack: "ES6, Vue"
     }
 ]
 

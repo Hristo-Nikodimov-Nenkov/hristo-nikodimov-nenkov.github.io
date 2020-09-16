@@ -5,7 +5,11 @@ export default {
     state:{
         projects:[]
     },
-    getters:{},
+    getters:{
+        getByLanguage: (state) => (language) => {
+            return state.projects.filter(p => p.language === language)
+        }
+    },
     mutations:{
         setProjects: (state, projects) => state.projects = projects
     },
