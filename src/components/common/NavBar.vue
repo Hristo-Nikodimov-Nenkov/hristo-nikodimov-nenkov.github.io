@@ -38,6 +38,7 @@ nav {
   justify-content: space-between;
   width: auto;
   padding: 5px 15px;
+  background-color: #dddddd;
 }
 .nav-section{
   display: inline-flex;

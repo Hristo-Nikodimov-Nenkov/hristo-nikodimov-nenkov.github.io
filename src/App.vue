@@ -43,9 +43,8 @@ body {
   display: grid;
   grid-template-areas: "header" "content" "footer";
   grid-auto-rows: max-content auto max-content;
-  border: 1px solid #333333;
-  border-radius: 8px;
-  height: 95vh;
+  height: 93vh;
+  margin: 1vh 3vw;
 }
 
 header {
