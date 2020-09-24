@@ -15,15 +15,14 @@ export default {
   components: {
     BaseSection
   },
-  props:{
-    section:{
-      type:Object,
-      required:true
+  props: {
+    section: {
+      type: Object,
+      required: true
     }
   }
 }
 </script>
 
 <style scoped>
-
 </style>

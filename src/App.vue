@@ -11,6 +11,7 @@
     </footer>
   </div>
 </template>
+
 <script>
 import NavBar from "@/components/common/NavBar.vue";
 import PageFooter from "@/components/common/PageFooter.vue";
@@ -23,7 +24,6 @@ export default {
   }
 }
 </script>
-
 
 <style>
 html {
@@ -43,8 +43,8 @@ body {
   display: grid;
   grid-template-areas: "header" "content" "footer";
   grid-auto-rows: max-content auto max-content;
-  height: 93vh;
-  margin: 1vh 3vw;
+  height: 94vh;
+  margin: 1vh 1vw;
 }
 
 header {
@@ -59,6 +59,10 @@ main {
   overflow: auto;
 }
 
+.app-page{
+  margin: 2vh 3vw;
+}
+
 footer {
   grid-area: footer;
   width: 100%;
@@ -69,5 +73,4 @@ footer > div {
   padding: 1vh;
   text-align: center;
 }
-
 </style>
