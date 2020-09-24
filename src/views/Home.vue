@@ -1,24 +1,15 @@
 <template>
   <div id="home-page">
-    <personal-info-section :section="this.sections.personalInfoSection"/>
-    <div v-for="(section, index) in this.sections.namedSections" :key="index">
-      <SectionWithTitle :section="section"/>
-    </div>
   </div>
 </template>
 
 <script>
 import {createNamespacedHelpers} from "vuex"
-const {mapState, mapActions} = createNamespacedHelpers("sections")
-
-import PersonalInfoSection from "@/components/sections/PersonalInfoSection";
-import SectionWithTitle from "@/components/sections/SectionWithTitle";
+const {mapState, mapActions} = createNamespacedHelpers("sections");
 
 export default {
   name: 'Home',
   components: {
-    SectionWithTitle,
-    PersonalInfoSection
   },
   computed:{
     ...mapState(["sections"])

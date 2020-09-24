@@ -1,11 +1,8 @@
 const sections = {
     personalInfoSection: {
         imageUrl: "",
+        title:"Hristo Nikodimov Nenkov",
         fields: [
-            {
-                key: "Name: ",
-                value: "Hristo Nikodimov Nenkov"
-            },
             {
                 key: "E-Mail: ",
                 value: "hristo.nikodimov.nenkov@gmail.com"
@@ -31,7 +28,7 @@ const sections = {
                 },
                 {
                     key:"English",
-                    value: "B3"
+                    value: "B2"
                 }
             ]
         }

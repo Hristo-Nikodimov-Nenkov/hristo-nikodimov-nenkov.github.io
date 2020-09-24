@@ -15,6 +15,7 @@ new Vue({
         delete sessionStorage.redirect;
 
         const baseUrl = 'https://hristo-nikodimov-nenkov.github.io'
+
         if (redirect && redirect !== location.href) {
             redirect = redirect.split(baseUrl)[1];
             this.$router.push(redirect)
