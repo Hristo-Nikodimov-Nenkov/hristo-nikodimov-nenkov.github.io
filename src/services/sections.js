@@ -1,11 +1,16 @@
 const sections = {
-    personalInfoSection: {
-        imageUrl: "",
-        title:"Hristo Nikodimov Nenkov",
+    personalInfo: {
+        photoUrl: "",
+        name:"Hristo Nikodimov Nenkov",
+        summary:"sd;ughl;ksjglkjdg bskjd gbdkjsbgsd kjbgsljsbg ;kjwegogews gb/dsjkgba eksjdbgkjsgb kjsdbgskjdsb gkjdsbgkjdbgkj sdbgkjbdskjgb dskjgbkjdsbgk jbsgkjdsbk jgbdkjgbs dkjgbdkjb gkjdbgkjdsbsg kjbsegkjbkjewbgjkvb vjklvblewbvkj",
         fields: [
             {
-                key: "E-Mail: ",
+                title: "E-Mail",
                 value: "hristo.nikodimov.nenkov@gmail.com"
+            },
+            {
+                title: "Phone Number",
+                value: "+34611280084"
             }
         ]
     },
@@ -14,7 +19,7 @@ const sections = {
             title: "Education and Experience",
             fields: [
                 {
-                    key: "SoftUni",
+                    title: "SoftUni",
                     value: "2016 - 2020"
                 }
             ]
@@ -23,11 +28,11 @@ const sections = {
             title: "Languages",
             fields: [
                 {
-                    key:"Bulgarian",
+                    title:"Bulgarian",
                     value: "Native language"
                 },
                 {
-                    key:"English",
+                    title:"English",
                     value: "B2"
                 }
             ]
