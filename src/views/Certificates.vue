@@ -1,18 +1,15 @@
 <template>
-  <certificates-list/>
+  <div id="certificates-page">
+  </div>
 </template>
 
 <script>
-import CertificatesList from "@/components/certificates/CertificatesList";
 
 export default {
   name: "Certificates",
-  components: {
-    CertificatesList
-  }
+  components: {}
 }
 </script>
 
 <style scoped>
-
 </style>
