@@ -2,21 +2,17 @@ const sections = {
     personalInfo: {
         photoUrl: "",
         name:"Hristo Nikodimov Nenkov",
-        summary:"sd;ughl;ksjglkjdg bskjd gbdkjsbgsd kjbgsljsbg ;kjwegogews gb/dsjkgba eksjdbgkjsgb kjsdbgskjdsb gkjdsbgkjdbgkj sdbgkjbdskjgb dskjgbkjdsbgk jbsgkjdsbk jgbdkjgbs dkjgbdkjb gkjdbgkjdsbsg kjbsegkjbkjewbgjkvb vjklvblewbvkj",
+        summary:"",
         fields: [
             {
                 title: "E-Mail",
                 value: "hristo.nikodimov.nenkov@gmail.com"
-            },
-            {
-                title: "Phone Number",
-                value: "+34611280084"
             }
         ]
     },
     namedSections: [
         {
-            title: "Education and Experience",
+            title: "Education",
             fields: [
                 {
                     title: "SoftUni",
