@@ -60,7 +60,7 @@ main {
 }
 
 .app-page{
-  margin: 2vh 3vw;
+  margin: 2vh 3vw 0 3vw;
 }
 
 footer {

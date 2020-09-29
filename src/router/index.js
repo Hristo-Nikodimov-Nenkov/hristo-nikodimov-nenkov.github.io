@@ -17,8 +17,17 @@ const routes = [
     },
     {
         path: '/certificates',
-        name: 'Certificates',
-        component: () => import('../views/Certificates.vue')
+        component: () => import('../views/Certificates.vue'),
+        children:[
+            {
+                path:'',
+                component: () => import('../components/certificates/CertificatesHome.vue')
+            },
+            {
+                path: ':id',
+                component: () => import('../components/certificates/CertificateDetails')
+            }
+        ]
     },
     {
         path: '/projects',
