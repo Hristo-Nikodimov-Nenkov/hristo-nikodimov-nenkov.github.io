@@ -26,7 +26,7 @@
 <script>
 import {createNamespacedHelpers} from "vuex";
 
-const {mapState} = createNamespacedHelpers("navigation");
+const {mapGetters} = createNamespacedHelpers("navigation");
 
 export default {
    name: "AppNavigation",
@@ -36,13 +36,15 @@ export default {
       }
    },
    computed: {
-      ...mapState(["navigation"])
+      ...mapGetters(["getLinksForRoute"])
    },
    created() {
-      this.links = this.navigation[this.$route] || this.navigation["default"];
+      this.links = this.getLinksForRoute(this.$route.name)
    },
-   updated() {
-      this.links = this.navigation[this.$route] || this.navigation["default"];
+   watch: {
+      $route(to) {
+         this.links = this.getLinksForRoute(to.name)
+      }
    }
 }
 </script>
