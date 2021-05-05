@@ -7,10 +7,15 @@ export default {
                     text: "Contacts",
                     url: "/contacts"
                 }
-            ]
+            ],
+            "Contacts": []
         }
     },
-    getters: {},
+    getters: {
+        getLinksForRoute: (state) => (route) => {
+            return state.navigation[route] || state.navigation["default"]
+        }
+    },
     mutations: {},
     actions: {}
 }
