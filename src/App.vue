@@ -1,27 +1,11 @@
 <template>
-  <div id="app">
-    <header class="mx-3">
-      <nav-bar/>
-    </header>
-    <main class="pt-5">
-      <router-view class="app-page"/>
-    </main>
-    <footer class="text-center fixed-bottom">
-      <page-footer/>
-    </footer>
-  </div>
+   <div id="app">
+   </div>
 </template>
 
 <script>
-import NavBar from "@/components/common/NavBar.vue";
-import PageFooter from "@/components/common/PageFooter.vue";
-
 export default {
-  name: "App",
-  components: {
-    NavBar,
-    PageFooter
-  }
+   name: "App"
 }
 </script>
 
@@ -31,7 +15,7 @@ html, body {
    padding: 0;
 }
 
-#app{
+#app {
    height: 100vh;
 }
 </style>
