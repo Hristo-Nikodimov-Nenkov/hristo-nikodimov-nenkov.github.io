@@ -6,15 +6,21 @@
       <main>
          <router-view/>
       </main>
+      <footer class="fixed-bottom">
+         <app-footer/>
+      </footer>
    </div>
 </template>
 
 <script>
 import AppNavigation from "@/components/common/AppNavigation";
+import AppFooter from "@/components/common/AppFooter";
+
 export default {
    name: "App",
    components:{
-      AppNavigation
+      AppNavigation,
+      AppFooter
    },
 }
 </script>
@@ -28,4 +34,5 @@ html, body {
 #app {
    height: 100vh;
 }
+
 </style>
