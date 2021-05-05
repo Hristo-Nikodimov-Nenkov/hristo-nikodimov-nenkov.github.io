@@ -11,30 +11,6 @@ const routes = [
         component: Home
     },
     {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-    },
-    {
-        path: '/certificates',
-        component: () => import('../views/Certificates.vue'),
-        children:[
-            {
-                path:'',
-                component: () => import('../components/certificates/CertificatesHome.vue')
-            },
-            {
-                path: ':id',
-                component: () => import('../components/certificates/CertificateDetails')
-            }
-        ]
-    },
-    {
-        path: '/projects',
-        name: 'Projects',
-        component: () => import('../views/Projects.vue')
-    },
-    {
         path: '*',
         name: 'NotFound',
         component: () => import('../views/NotFound.vue')

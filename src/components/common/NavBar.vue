@@ -1,8 +1,8 @@
 <template>
-  <nav>
+  <nav class="navbar navbar-nav navbar-expand-md fixed-top px-3">
     <template v-if="(this.mergeSectionsItems)">
       <div class="nav-item" v-for="(item, index) in this.getNavItems" :key="index">
-        <router-link :to="item.url">{{ item.text }}</router-link>
+        <router-link class="nav-link" :to="item.url">{{ item.text }}</router-link>
       </div>
     </template>
     <template class="nav-section" v-else>
@@ -32,33 +32,4 @@ export default {
 </script>
 
 <style scoped>
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: auto;
-  padding: 5px 15px;
-  background-color: #dddddd;
-}
-.nav-section{
-  display: inline-flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.nav-item {
-  margin: 5px auto;
-}
-
-.nav-item a {
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.nav-item a.router-link-exact-active {
-  color: lime;
-}
-
 </style>
