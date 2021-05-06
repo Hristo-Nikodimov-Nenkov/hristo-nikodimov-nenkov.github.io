@@ -1,12 +1,22 @@
 <template>
-<div>
-   <h1 class="text-center font-italic font-weight-bold">This is contacts page.</h1>
-</div>
+   <div>
+      <div class="d-flex justify-content-center" v-for="(contact, index) in contacts" :key="index">
+         <div class="mx-2"><i :class="contact.icon" aria-hidden="true"></i></div>
+         <div>{{ contact.text }} : {{ contact.value }}</div>
+      </div>
+   </div>
 </template>
 
 <script>
+import {createNamespacedHelpers} from "vuex";
+
+const {mapState} = createNamespacedHelpers("contacts");
+
 export default {
-   name: "Contacts"
+   name: "Contacts",
+   computed: {
+      ...mapState(["contacts"])
+   }
 }
 </script>
 
