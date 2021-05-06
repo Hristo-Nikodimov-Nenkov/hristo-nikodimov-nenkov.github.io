@@ -3,7 +3,7 @@
       <header>
          <app-navigation/>
       </header>
-      <main>
+      <main class="pb-4">
          <router-view/>
       </main>
       <footer class="fixed-bottom">
