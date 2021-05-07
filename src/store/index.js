@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 import navigation from "@/store/navigation";
 import contacts from "@/store/contacts";
+import education from "@/store/education";
 
 export default new Vuex.Store({
     state: {},
@@ -11,6 +12,7 @@ export default new Vuex.Store({
     actions: {},
     modules: {
         navigation,
-        contacts
+        contacts,
+        education
     }
 })
