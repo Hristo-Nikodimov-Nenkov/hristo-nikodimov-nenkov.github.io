@@ -6,9 +6,23 @@ export default {
                 {
                     text: "Contacts",
                     url: "/contacts"
+                },
+                {
+                    text:"Education",
+                    url:"/education"
                 }
             ],
-            "Contacts": []
+            "Contacts": [],
+            "Education":[
+                {
+                    text:"Modules",
+                    url:"/education/modules"
+                },
+                {
+                    text:"Open Courses",
+                    url:"/education/opencourses"
+                }
+            ]
         }
     },
     getters: {
