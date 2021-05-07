@@ -11,9 +11,14 @@ const routes = [
         component: Home
     },
     {
-      path: '/contacts',
-      name: 'Contacts',
-      component: () => import('../views/Contacts')
+        path: '/education',
+        name: 'Education',
+        component: () => import('../views/Education')
+    },
+    {
+        path: '/contacts',
+        name: 'Contacts',
+        component: () => import('../views/Contacts')
     },
     {
         path: '*',
