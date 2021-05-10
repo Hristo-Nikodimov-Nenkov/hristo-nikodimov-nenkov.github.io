@@ -10,6 +10,10 @@ export default {
                 {
                     text:"Education",
                     url:"/education"
+                },
+                {
+                    text: "Projects",
+                    url: "/projects"
                 }
             ],
             "Contacts": [],
