@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2138f6"],{acca:function(e,n,c){"use strict";c.r(n);var t=function(){var e=this,n=e.$createElement,c=e._self._c||n;return c("div")},a=[],r={name:"Projects"},s=r,u=c("2877"),o=Object(u["a"])(s,t,a,!1,null,"46ed84a0",null);n["default"]=o.exports}}]);
+//# sourceMappingURL=chunk-2d2138f6.db000a9b.js.map
