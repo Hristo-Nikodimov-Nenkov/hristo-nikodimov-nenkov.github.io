@@ -132,7 +132,12 @@ export default {
             courses = [...courses, ...state.softuni.openCourses]
 
             return courses;
-        }
+        },
+        getModulesAsLinks: state =>
+            state.softuni.modules.map(m => ({
+                url: escape(`/education/${m.name}`),
+                text: m.name
+            }))
     },
     mutations: {},
     actions: {}
