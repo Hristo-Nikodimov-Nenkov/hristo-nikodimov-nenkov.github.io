@@ -1,11 +1,10 @@
 <template>
-   <div>
-   </div>
+   <h1>Education home page.</h1>
 </template>
 
 <script>
 export default {
-   name: "Courses"
+   name: "Education"
 }
 </script>
 

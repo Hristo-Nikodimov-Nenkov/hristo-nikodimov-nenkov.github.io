@@ -1,12 +1,10 @@
 <template>
-   <div>
-   </div>
+   <h1>Details for {{ $route.params.module }} module.</h1>
 </template>
 
 <script>
-
 export default {
-   name: "Education"
+   name: "Module"
 }
 </script>
 
