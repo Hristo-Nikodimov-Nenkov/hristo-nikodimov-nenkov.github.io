@@ -1,5 +1,5 @@
 <template>
-   <ul class="list-inline">
+   <ul>
       <li
          v-for="(link, index) of links"
          :key="index">
@@ -7,6 +7,7 @@
             :to="link.url">
             {{ link.text }}
          </router-link>
+         <links-list :links="link.items"/>
       </li>
    </ul>
 </template>
