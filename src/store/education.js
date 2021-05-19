@@ -59,7 +59,7 @@ export default {
                     name: "C# DB",
                     courses: [
                         {
-                            name: "Databases Basics - MS SQL Server",
+                            name: "Databases Basics - MS SQL Server - септември 2019",
                             instance: new Date(2019, 8),
                             grade: 5.23,
                             certificateUrl: "https://softuni.bg/Certificates/Details/75936/13ed4146"
@@ -82,7 +82,7 @@ export default {
                             certificateUrl: "https://softuni.bg/Certificates/Details/70574/6e7b4d97"
                         },
                         {
-                            name: "ASP.NET Core",
+                            name: "ASP.NET Core - февруари 2020",
                             instance: new Date(2019, 1),
                             grade: 5,
                             certificateUrl: "https://softuni.bg/Certificates/Details/82168/4493403c"
@@ -136,11 +136,7 @@ export default {
         getModulesAsLinks: state =>
             state.softuni.modules.map(m => ({
                 url: escape(`/education/${m.name}`),
-                text: m.name,
-                items: m.courses.map(c => ({
-                    url: escape(`/education/${m.name}/${c.name}`),
-                    text: c.name,
-                }))
+                text: m.name
             }))
     },
     mutations: {},
