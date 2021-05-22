@@ -1,22 +1,25 @@
 <template>
    <ul>
-      <li
-         v-for="(link, index) of links"
-         :key="index">
-         <router-link
-            :to="link.url">
-            {{ link.text }}
-         </router-link>
-         <links-list :links="link.items"/>
-      </li>
+      <links-list-item
+         v-for="(item, index) in getModulesAsLinks"
+         :key="index"
+         :item="item"/>
    </ul>
 </template>
 
 <script>
+import LinksListItem from "@/components/education/LinksListItem";
+import {createNamespacedHelpers} from "vuex";
+
+const {mapGetters} = createNamespacedHelpers("education");
+
 export default {
    name: "LinksList",
-   props: {
-      links: Array
+   components: {
+      LinksListItem
+   },
+   computed: {
+      ...mapGetters(["getModulesAsLinks"])
    }
 }
 </script>
